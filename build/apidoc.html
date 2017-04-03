@@ -1,0 +1,2294 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://waterlinejs.org"
+
+    >waterline (v0.11.11)</a>
+</h1>
+<h4>An ORM for Node.js and the Sails framework.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.waterline">module waterline</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection">
+            function <span class="apidocSignatureSpan">waterline.</span>Collection
+            <span class="apidocSignatureSpan">(waterline, connections, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_">
+            function <span class="apidocSignatureSpan">waterline.</span>Collection.super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Model">
+            function <span class="apidocSignatureSpan">waterline.</span>Model
+            <span class="apidocSignatureSpan">(context, mixins)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">waterline.</span>Collection.super_.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.waterline.Collection">module waterline.Collection</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.Collection">
+            function <span class="apidocSignatureSpan">waterline.</span>Collection
+            <span class="apidocSignatureSpan">(waterline, connections, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.extend">
+            function <span class="apidocSignatureSpan">waterline.Collection.</span>extend
+            <span class="apidocSignatureSpan">(protoProps, staticProps)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_">
+            function <span class="apidocSignatureSpan">waterline.Collection.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.waterline.Collection.super_">module waterline.Collection.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.super_">
+            function <span class="apidocSignatureSpan">waterline.Collection.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.extend">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.</span>extend
+            <span class="apidocSignatureSpan">(protoProps, staticProps)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.waterline.Collection.super_.prototype">module waterline.Collection.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.alter">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>alter
+            <span class="apidocSignatureSpan">(attributes, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.buildDynamicFinders">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>buildDynamicFinders
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.contains">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>contains
+            <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.count">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>count
+            <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.create">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>create
+            <span class="apidocSignatureSpan">(values, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.createEach">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>createEach
+            <span class="apidocSignatureSpan">(valuesList, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.describe">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>describe
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.destroy">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>destroy
+            <span class="apidocSignatureSpan">(criteria, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.drop">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>drop
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.endsWith">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>endsWith
+            <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.find">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>find
+            <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.findAll">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>findAll
+            <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.findLike">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>findLike
+            <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.findOne">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>findOne
+            <span class="apidocSignatureSpan">(criteria, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.findOneLike">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>findOneLike
+            <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.findOrCreate">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>findOrCreate
+            <span class="apidocSignatureSpan">(criteria, values, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.findOrCreateEach">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>findOrCreateEach
+            <span class="apidocSignatureSpan">(criteria, valuesList, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.generateAssociationFinders">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>generateAssociationFinders
+            <span class="apidocSignatureSpan">(attrName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.generateDynamicFinder">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>generateDynamicFinder
+            <span class="apidocSignatureSpan">(attrName, method, dontCapitalize)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.join">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>join
+            <span class="apidocSignatureSpan">(collection, fk, pk, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.select">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>select
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.startsWith">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>startsWith
+            <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.stream">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>stream
+            <span class="apidocSignatureSpan">(criteria, transformation)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.sync">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>sync
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.update">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>update
+            <span class="apidocSignatureSpan">(criteria, values, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.validate">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>validate
+            <span class="apidocSignatureSpan">(values, presentOnly, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.waterline.Collection.super_.prototype.where">
+            function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>where
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.waterline" id="apidoc.module.waterline">module waterline</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection" id="apidoc.element.waterline.Collection">
+        function <span class="apidocSignatureSpan">waterline.</span>Collection
+        <span class="apidocSignatureSpan">(waterline, connections, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Collection = function (waterline, connections, cb) {
+
+  var self = this;
+
+  // Set the named connections
+  this.connections = connections || {};
+
+  // Cache reference to the parent
+  this.waterline = waterline;
+
+  // Default Attributes
+  this.attributes = this.attributes || {};
+
+  // Instantiate Base Collection
+  Core.call(this);
+
+  // Instantiate Query Language
+  Query.call(this);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_" id="apidoc.element.waterline.Collection.super_">
+        function <span class="apidocSignatureSpan">waterline.</span>Collection.super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Collection.super_ = function () {
+
+  // Create a reference to an internal Adapter Base
+  this.adapter = new AdapterBase({
+    connections: this.connections,
+    query: this,
+    collection: this.tableName || this.identity,
+    identity: this.identity,
+    dictionary: this.adapterDictionary
+  });
+
+  // Mixin Custom Adapter Functions.
+  AdapterMixin.call(this);
+
+  // Generate Dynamic Finders
+  this.buildDynamicFinders();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Model" id="apidoc.element.waterline.Model">
+        function <span class="apidocSignatureSpan">waterline.</span>Model
+        <span class="apidocSignatureSpan">(context, mixins)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Model = function (context, mixins) {
+
+<span class="apidocCodeCommentSpan">  /**
+   * Extend the model prototype with default instance methods
+   */
+</span>
+  var prototypeFns = {
+
+    toObject: function() {
+      return new defaultMethods.toObject(context, this);
+    },
+
+    save: function(options, cb) {
+      return new defaultMethods.save(context, this, options, cb);
+    },
+
+    destroy: function(cb) {
+      return new defaultMethods.destroy(context, this, cb);
+    },
+
+    _defineAssociations: function() {
+      new internalMethods.defineAssociations(context, this);
+    },
+
+    _normalizeAssociations: function() {
+      new internalMethods.normalizeAssociations(context, this);
+    },
+
+    _cast: function(values) {
+      _.keys(context._attributes).forEach(function(key) {
+        var type = context._attributes[key].type;
+
+        // Attempt to parse Array or JSON type
+        if (type === &#x27;array&#x27; || type === &#x27;json&#x27;) {
+          if (!_.isString(values[key])) return;
+          try {
+            values[key] = JSON.parse(values[key]);
+          } catch(e) {
+            return;
+          }
+        }
+
+        // Convert booleans back to true/false
+        if (type === &#x27;boolean&#x27;) {
+          var val = values[key];
+          if (val === 0) values[key] = false;
+          if (val === 1) values[key] = true;
+        }
+
+      });
+    },
+
+    /**
+     * Model.validate()
+     *
+     * Takes the currently set attributes and validates the model
+     * Shorthand for Model.validate({ attributes }, cb)
+     *
+     * @param {Function} callback - (err)
+     * @return {Promise}
+     */
+
+    validate: function(cb) {
+      // Collect current values
+      var values = this.toObject();
+
+      if (cb) {
+        context.validate(values, function(err) {
+          if (err) { return cb(err); }
+          cb();
+        });
+        return;
+      } else {
+        return new Bluebird(function(resolve, reject) {
+          context.validate(values, function(err) {
+            if (err) { return reject(err); }
+            resolve();
+          });
+        });
+      }
+    }
+
+  };
+
+  // If any of the attributes are protected, the default toJSON method should
+  // remove them.
+  var protectedAttributes = _.compact(_.map(context._attributes, function(attr, key) {return attr.protected ? key : undefined;}));
+
+  prototypeFns.toJSON = function() {
+    var obj = this.toObject();
+
+    if (protectedAttributes.length) {
+      _.each(protectedAttributes, function(key) {
+        delete obj[key];
+      });
+    }
+
+    // Remove toJSON from the result, to prevent infinite recursion with
+    // msgpack or other recursive object transformation tools.
+    //
+    // Causes issues if set to null and will error in Sails if we delete it because blueprints call it.
+    //
+    // obj.toJSON = null;
+
+    return obj;
+  };
+
+  var prototype = _.extend(prototypeFns, mixins);
+
+  var model = Model.extend(prototype);
+
+  // Return the extended model for use in Waterline
+  return model;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.waterline.Collection" id="apidoc.module.waterline.Collection">module waterline.Collection</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.Collection" id="apidoc.element.waterline.Collection.Collection">
+        function <span class="apidocSignatureSpan">waterline.</span>Collection
+        <span class="apidocSignatureSpan">(waterline, connections, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Collection = function (waterline, connections, cb) {
+
+  var self = this;
+
+  // Set the named connections
+  this.connections = connections || {};
+
+  // Cache reference to the parent
+  this.waterline = waterline;
+
+  // Default Attributes
+  this.attributes = this.attributes || {};
+
+  // Instantiate Base Collection
+  Core.call(this);
+
+  // Instantiate Query Language
+  Query.call(this);
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.extend" id="apidoc.element.waterline.Collection.extend">
+        function <span class="apidocSignatureSpan">waterline.Collection.</span>extend
+        <span class="apidocSignatureSpan">(protoProps, staticProps)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function (protoProps, staticProps) {
+  var parent = this;
+  var child;
+
+  if (protoProps &#x26;&#x26; _.has(protoProps, &#x27;constructor&#x27;)) {
+    child = protoProps.constructor;
+  } else {
+    child = function() { return parent.apply(this, arguments); };
+  }
+
+  _.extend(child, parent, staticProps);
+
+  var Surrogate = function() { this.constructor = child; };
+  Surrogate.prototype = parent.prototype;
+  child.prototype = new Surrogate();
+
+  if (protoProps) _.extend(child.prototype, protoProps);
+
+  child.__super__ = parent.prototype;
+
+  return child;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+#### Usage (standalone)
+```javascript
+var Waterline = require(&#x27;waterline&#x27;);
+
+// Define your collection (aka model)
+var User = Waterline.Collection.<span class="apidocCodeKeywordSpan">extend</span>({
+
+  attributes: {
+
+firstName: {
+  type: &#x27;string&#x27;,
+  required: true
+},
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_" id="apidoc.element.waterline.Collection.super_">
+        function <span class="apidocSignatureSpan">waterline.Collection.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function () {
+
+  // Create a reference to an internal Adapter Base
+  this.adapter = new AdapterBase({
+    connections: this.connections,
+    query: this,
+    collection: this.tableName || this.identity,
+    identity: this.identity,
+    dictionary: this.adapterDictionary
+  });
+
+  // Mixin Custom Adapter Functions.
+  AdapterMixin.call(this);
+
+  // Generate Dynamic Finders
+  this.buildDynamicFinders();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.waterline.Collection.super_" id="apidoc.module.waterline.Collection.super_">module waterline.Collection.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.super_" id="apidoc.element.waterline.Collection.super_.super_">
+        function <span class="apidocSignatureSpan">waterline.Collection.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function () {
+
+  // Create a reference to an internal Adapter Base
+  this.adapter = new AdapterBase({
+    connections: this.connections,
+    query: this,
+    collection: this.tableName || this.identity,
+    identity: this.identity,
+    dictionary: this.adapterDictionary
+  });
+
+  // Mixin Custom Adapter Functions.
+  AdapterMixin.call(this);
+
+  // Generate Dynamic Finders
+  this.buildDynamicFinders();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.extend" id="apidoc.element.waterline.Collection.super_.extend">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.</span>extend
+        <span class="apidocSignatureSpan">(protoProps, staticProps)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function (protoProps, staticProps) {
+  var parent = this;
+  var child;
+
+  if (protoProps &#x26;&#x26; _.has(protoProps, &#x27;constructor&#x27;)) {
+    child = protoProps.constructor;
+  } else {
+    child = function() { return parent.apply(this, arguments); };
+  }
+
+  _.extend(child, parent, staticProps);
+
+  var Surrogate = function() { this.constructor = child; };
+  Surrogate.prototype = parent.prototype;
+  child.prototype = new Surrogate();
+
+  if (protoProps) _.extend(child.prototype, protoProps);
+
+  child.__super__ = parent.prototype;
+
+  return child;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+#### Usage (standalone)
+```javascript
+var Waterline = require(&#x27;waterline&#x27;);
+
+// Define your collection (aka model)
+var User = Waterline.Collection.<span class="apidocCodeKeywordSpan">extend</span>({
+
+  attributes: {
+
+firstName: {
+  type: &#x27;string&#x27;,
+  required: true
+},
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.waterline.Collection.super_.prototype" id="apidoc.module.waterline.Collection.super_.prototype">module waterline.Collection.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.alter" id="apidoc.element.waterline.Collection.super_.prototype.alter">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>alter
+        <span class="apidocSignatureSpan">(attributes, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">alter = function (attributes, cb) {
+  this.adapter.alter(attributes, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.buildDynamicFinders" id="apidoc.element.waterline.Collection.super_.prototype.buildDynamicFinders">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>buildDynamicFinders
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildDynamicFinders = function () {
+  var self = this;
+
+  // For each defined attribute, create a dynamic finder function
+  Object.keys(this._attributes).forEach(function(attrName) {
+
+    // Check if attribute is an association, if so generate limited dynamic finders
+    if (hasOwnProperty(self._schema.schema[attrName], &#x27;foreignKey&#x27;)) {
+      if (self.associationFinders !== false) {
+        self.generateAssociationFinders(attrName);
+      }
+      return;
+    }
+
+    var capitalizedMethods = [&#x27;findOneBy*&#x27;, &#x27;findOneBy*In&#x27;, &#x27;findOneBy*Like&#x27;, &#x27;findBy*&#x27;, &#x27;findBy*In&#x27;,
+      &#x27;findBy*Like&#x27;, &#x27;countBy*&#x27;, &#x27;countBy*In&#x27;, &#x27;countBy*Like&#x27;];
+
+    var lowercasedMethods = [&#x27;*StartsWith&#x27;, &#x27;*Contains&#x27;, &#x27;*EndsWith&#x27;];
+
+
+    if (self.dynamicFinders !== false) {
+      capitalizedMethods.forEach(function(method) {
+        self.generateDynamicFinder(attrName, method);
+      });
+      lowercasedMethods.forEach(function(method) {
+        self.generateDynamicFinder(attrName, method, true);
+      });
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.contains" id="apidoc.element.waterline.Collection.super_.prototype.contains">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>contains
+        <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">contains = function (criteria, options, cb) {
+  var usage = utils.capitalize(this.identity) + &#x27;.startsWith([criteria],[options],callback)&#x27;;
+
+  criteria = normalize.likeCriteria(criteria, this._schema.schema, function applyContains(criteria) {
+    return &#x27;%&#x27; + criteria + &#x27;%&#x27;;
+  });
+
+  if (!criteria) return usageError(&#x27;Criteria must be an object!&#x27;, usage, cb);
+
+  this.find(criteria, options, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.count" id="apidoc.element.waterline.Collection.super_.prototype.count">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>count
+        <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">count = function (criteria, options, cb) {
+  var usage = utils.capitalize(this.identity) + &#x27;.count([criteria],[options],callback)&#x27;;
+
+  if (typeof criteria === &#x27;function&#x27;) {
+    cb = criteria;
+    criteria = null;
+    options = null;
+  }
+
+  if (typeof options === &#x27;function&#x27;) {
+    cb = options;
+    options = null;
+  }
+
+  // Return Deferred or pass to adapter
+  if (typeof cb !== &#x27;function&#x27;) {
+    return new Deferred(this, this.count, criteria);
+  }
+
+  // Normalize criteria and fold in options
+  criteria = normalize.criteria(criteria);
+
+  // If there was something defined in the criteria that would return no results, don&#x27;t even
+  // run the query and just return 0
+  if (criteria === false) {
+    return cb(null, 0);
+  }
+
+  if (_.isObject(options) &#x26;&#x26; _.isObject(criteria)) {
+    criteria = _.extend({}, criteria, options);
+  }
+
+  if (_.isFunction(criteria) || _.isFunction(options)) {
+    return usageError(&#x27;Invalid options specified!&#x27;, usage, cb);
+  }
+
+  // Transform Search Criteria
+  criteria = this._transformer.serialize(criteria);
+
+  // Remove any joins from the count criteria. They won&#x27;t have any effect on the
+  // number of results found.
+  if (_.isArray(criteria.joins)) {
+    delete criteria.joins;
+  }
+
+  if (criteria.where &#x26;&#x26; _.isArray(criteria.where.joins)) {
+    delete criteria.where.joins;
+  }
+
+  this.adapter.count(criteria, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.create" id="apidoc.element.waterline.Collection.super_.prototype.create">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>create
+        <span class="apidocSignatureSpan">(values, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (values, cb) {
+
+  var self = this;
+
+  // Handle Deferred where it passes criteria first
+  if (arguments.length === 3) {
+    var args = Array.prototype.slice.call(arguments);
+    cb = args.pop();
+    values = args.pop();
+  }
+
+  // Loop through values and pull out any buffers before cloning
+  var bufferValues = {};
+
+  _.each(_.keys(values), function(key) {
+    if (Buffer.isBuffer(values[key])) {
+      bufferValues[key] = values[key];
+    }
+  });
+
+  values = _.cloneDeep(values) || {};
+
+  // Replace clone keys with the buffer values
+  _.each(_.keys(bufferValues), function(key) {
+    values[key] = bufferValues[key];
+  });
+
+  // Remove all undefined values
+  if (_.isArray(values)) {
+    values = _.remove(values, undefined);
+  }
+
+  // Return Deferred or pass to adapter
+  if (typeof cb !== &#x27;function&#x27;) {
+    return new Deferred(this, this.create, {}, values);
+  }
+
+
+  // Handle Array of values
+  if (Array.isArray(values)) {
+    return this.createEach(values, cb);
+  }
+
+  // Process Values
+  var valuesObject = processValues.call(this, values);
+
+  // Create any of the belongsTo associations and set the foreign key values
+  createBelongsTo.call(this, valuesObject, function(err) {
+    if (err) return cb(err);
+
+    beforeCallbacks.call(self, valuesObject, function(err) {
+      if (err) return cb(err);
+      createValues.call(self, valuesObject, cb);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.createEach" id="apidoc.element.waterline.Collection.super_.prototype.createEach">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>createEach
+        <span class="apidocSignatureSpan">(valuesList, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createEach = function (valuesList, cb) {
+  var self = this;
+
+  // Handle Deferred where it passes criteria first
+  if (arguments.length === 3) {
+    var args = Array.prototype.slice.call(arguments);
+    cb = args.pop();
+    valuesList = args.pop();
+  }
+
+  // Return Deferred or pass to adapter
+  if (typeof cb !== &#x27;function&#x27;) {
+    return new Deferred(this, this.createEach, {}, valuesList);
+  }
+
+  // Validate Params
+  var usage = utils.capitalize(this.identity) + &#x27;.createEach(valuesList, callback)&#x27;;
+
+  if (!valuesList) return usageError(&#x27;No valuesList specified!&#x27;, usage, cb);
+  if (!Array.isArray(valuesList)) return usageError(&#x27;Invalid valuesList specified (should be an array!)&#x27;, usage, cb);
+  if (typeof cb !== &#x27;function&#x27;) return usageError(&#x27;Invalid callback specified!&#x27;, usage, cb);
+
+  var errStr = _validateValues(_.cloneDeep(valuesList));
+  if (errStr) return usageError(errStr, usage, cb);
+
+  // Handle undefined values
+  var filteredValues = _.filter(valuesList, function(value) {
+    return value !== undefined;
+  });
+
+  // Create will take care of cloning values so original isn&#x27;t mutated
+  async.map(filteredValues, self.create.bind(self), cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.describe" id="apidoc.element.waterline.Collection.super_.prototype.describe">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>describe
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">describe = function (cb) {
+  this.adapter.describe(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.destroy" id="apidoc.element.waterline.Collection.super_.prototype.destroy">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>destroy
+        <span class="apidocSignatureSpan">(criteria, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (criteria, cb) {
+  var self = this;
+  var pk;
+
+  if (typeof criteria === &#x27;function&#x27;) {
+    cb = criteria;
+    criteria = {};
+  }
+
+  // Check if criteria is an integer or string and normalize criteria
+  // to object, using the specified primary key field.
+  criteria = normalize.expandPK(self, criteria);
+
+  // Normalize criteria
+  criteria = normalize.criteria(criteria);
+
+  // Return Deferred or pass to adapter
+  if (typeof cb !== &#x27;function&#x27;) {
+    return new Deferred(this, this.destroy, criteria);
+  }
+
+  var usage = utils.capitalize(this.identity) + &#x27;.destroy([options], callback)&#x27;;
+  if (typeof cb !== &#x27;function&#x27;) return usageError(&#x27;Invalid callback specified!&#x27;, usage, cb);
+
+  // If there was something defined in the criteria that would return no results, don&#x27;t even
+  // run the query and just return an empty result set.
+  if (criteria === false) {
+    return cb(null, []);
+  }
+
+  callbacks.beforeDestroy(self, criteria, function(err) {
+    if (err) return cb(err);
+
+    // Transform Search Criteria
+    criteria = self._transformer.serialize(criteria);
+
+    // Pass to adapter
+    self.adapter.destroy(criteria, function(err, result) {
+      if (err) return cb(err);
+
+      // Look for any m:m associations and destroy the value in the join table
+      var relations = getRelations({
+        schema: self.waterline.schema,
+        parentCollection: self.identity
+      });
+
+      if (relations.length === 0) return after();
+
+      // Find the collection&#x27;s primary key
+      for (var key in self.attributes) {
+        if (!self.attributes[key].hasOwnProperty(&#x27;primaryKey&#x27;)) continue;
+
+        // Check if custom primaryKey value is falsy
+        if (!self.attributes[key].primaryKey) continue;
+
+        if (self.attributes[key].columnName) {
+          pk = self.attributes[key].columnName;
+        } else {
+          pk = key;
+        }
+
+        break;
+      }
+
+      function destroyJoinTableRecords(item, next) {
+        var collection = self.waterline.collections[item];
+        var refKey = [];
+
+        Object.keys(collection._attributes).forEach(function(key) {
+          var attr = collection._attributes[key];
+          if (attr.references !== self.identity) return;
+          refKey.push(key);
+        });
+
+        // If no refKey return, this could leave orphaned join table values but it&#x27;s better
+        // than crashing.
+        if (!refKey.length) return next();
+
+        // Make sure we don&#x27;t return any undefined pks
+        var mappedValues = result.reduce(function(memo, vals) {
+          if (vals[pk] !== undefined) {
+            memo.push(vals[pk]);
+          }
+          return memo;
+        }, []);
+
+        var criteria = {};
+
+        if (mappedValues.length &#x3e; 0) {
+          // Handle reflexive associations by building up an OR clause.
+          if (refKey.length &#x3e; 1) {
+            var orCriteria = [];
+            _.each(refKey, function(columnName) {
+              var where = {};
+              where[columnName] = mappedValues;
+              orCriteria.push(where);
+            });
+
+            criteria = {
+              or: orCriteria
+            };
+          } else {
+            criteria[_.first(refKey)] = mappedValues;
+          }
+
+          collection.destroy(criteria).exec(next);
+        } else {
+          return next();
+        }
+
+      }
+
+      async.each(relations, destroyJoinTableRecords, function(err) {
+        if (err) return cb(err);
+        after();
+      });
+
+      function after() {
+
+        // If no result was returned, default to empty array
+        if (!result) {
+          result = [];
+        }
+
+        // If values is not an array, return an array
+        if (!Array.isArray(result)) {
+          result = [result];
+        }
+
+        // Unserialize each value
+        var transformedValues = result.map(function(value) {
+          return self._transformer.unserialize(value);
+        });
+
+        callbacks.afterDestroy(self, transformedValues, function(err) {
+          if (err) return cb(err);
+          cb(null, transformedValues);
+        });
+      }
+
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.drop" id="apidoc.element.waterline.Collection.super_.prototype.drop">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>drop
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">drop = function (cb) {
+  this.adapter.drop(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.endsWith" id="apidoc.element.waterline.Collection.super_.prototype.endsWith">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>endsWith
+        <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">endsWith = function (criteria, options, cb) {
+  var usage = utils.capitalize(this.identity) + &#x27;.startsWith([criteria],[options],callback)&#x27;;
+
+  criteria = normalize.likeCriteria(criteria, this._schema.schema, function applyEndsWith(criteria) {
+    return &#x27;%&#x27; + criteria;
+  });
+
+  if (!criteria) return usageError(&#x27;Criteria must be an object!&#x27;, usage, cb);
+
+  this.find(criteria, options, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.find" id="apidoc.element.waterline.Collection.super_.prototype.find">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>find
+        <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">find = function (criteria, options, cb) {
+  var self = this;
+
+  var usage = utils.capitalize(this.identity) + &#x27;.find([criteria],[options]).exec(callback|switchback)&#x27;;
+
+  if (typeof criteria === &#x27;function&#x27;) {
+    cb = criteria;
+    criteria = null;
+    options = null;
+  }
+
+  if (typeof options === &#x27;function&#x27;) {
+    cb = options;
+    options = null;
+  }
+
+  // If the criteria is an array of objects, wrap it in an &#x22;or&#x22;
+  if (Array.isArray(criteria) &#x26;&#x26; _.all(criteria, function(crit) {return _.isObject(crit);})) {
+    criteria = {or: criteria};
+  }
+
+  // Check if criteria is an integer or string and normalize criteria
+  // to object, using the specified primary key field.
+  criteria = normalize.expandPK(self, criteria);
+
+  // Normalize criteria
+  criteria = normalize.criteria(criteria);
+
+  // Validate Arguments
+  if (typeof criteria === &#x27;function&#x27; || typeof options === &#x27;function&#x27;) {
+    return usageError(&#x27;Invalid options specified!&#x27;, usage, cb);
+  }
+
+  // Return Deferred or pass to adapter
+  if (typeof cb !== &#x27;function&#x27;) {
+    return new Deferred(this, this.find, criteria, options);
+  }
+
+  // If there was something defined in the criteria that would return no results, don&#x27;t even
+  // run the query and just return an empty result set.
+  if (criteria === false) {
+    return cb(null, []);
+  }
+
+  // Fold in options
+  if (options === Object(options) &#x26;&#x26; criteria === Object(criteria)) {
+    criteria = _.extend({}, criteria, options);
+  }
+
+  // Transform Search Criteria
+  if (!self._transformer) {
+    throw new Error(&#x27;Waterline can not access transformer-- maybe the context of the method is being overridden?&#x27;);
+  }
+
+  criteria = self._transformer.serialize(criteria);
+
+  // serialize populated object
+  if (criteria.joins) {
+    criteria.joins.forEach(function(join) {
+      if (join.criteria &#x26;&#x26; join.criteria.where) {
+        var joinCollection = self.waterline.collections[join.child];
+        join.criteria.where = joinCollection._transformer.serialize(join.criteria.where);
+      }
+    });
+  }
+
+  // Build up an operations set
+  var operations = new Operations(self, criteria, &#x27;find&#x27;);
+
+  // Run the operations
+  operations.run(function(err, values) {
+    if (err) return cb(err);
+    if (!values.cache) return cb();
+
+    // If no joins are used grab current collection&#x27;s item from the cache and pass to the returnResults
+    // function.
+    if (!criteria.joins) {
+      values = values.cache[self.identity];
+      return returnResults(values);
+    }
+
+    // If the values are already combined, return the results
+    if (values.combined) {
+      return returnResults(values.cache[self.identity]);
+    }
+
+    // Find the primaryKey of the current model so it can be passed down to the integrator.
+    // Use &#x27;id&#x27; as a good general default;
+    var primaryKey = &#x27;id&#x27;;
+
+    Object.keys(self._schema.schema).forEach(function(key) {
+      if (self._schema.schema[key].hasOwnProperty(&#x27;primaryKey&#x27;) &#x26;&#x26; self._schema.schema[key].primaryKey) {
+        primaryKey = key;
+      }
+    });
+
+    // Perform in-memory joins
+    Integrator(values.cache, criteria.joins, primaryKey, function(err, results) {
+      if (err) return cb(err);
+      if (!results) return cb();
+
+      // We need to run one last check on the results using the criteria. This allows a self
+      // association where we end up with two records in the cache both having each other as
+      // embedded objects and we only want one result. However we need to filter any join criteria
+      // out of the top level where query so that searchs by primary key still work.
+      var tmpCriteria = _.cloneDeep(criteria.where);
+      if (!tmpCriteria) tmpCriteria = {};
+
+      criteria.joins.forEach(function(join) {
+        if (!hasOwnProperty(join, &#x27;alias&#x27;)) return;
+
+        // Check for `OR` criteria
+        if (hasOwnProperty(tmpCriteria, &#x27;or&#x27;)) {
+          tmpCriteria.or.forEach(function(search) {
+            if (!hasOwnProperty(search, join.alias)) return;
+            delete search[join.alias];
+          });
+        }
+
+        if (!hasOwnProperty(tmpCriteria, join.alias)) return;
+        delete tmpCriteria[join.alias]; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```javascript
+var postgres = require(&#x27;sails-postgresql&#x27;);
+
+new User({ tableName: &#x27;foobar&#x27;, adapters: { postgresql: postgres }}, function(err, Model) {
+
+  // We now have an instantiated collection to execute queries against
+  Model.<span class="apidocCodeKeywordSpan">find</span>()
+  .where({ age: 21 })
+  .limit(10)
+  .exec(function(err, users) {
+    // Now we have an array of users
+  });
+
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.findAll" id="apidoc.element.waterline.Collection.super_.prototype.findAll">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>findAll
+        <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findAll = function (criteria, options, cb) {
+  if (typeof criteria === &#x27;function&#x27;) {
+    cb = criteria;
+    criteria = null;
+    options = null;
+  }
+
+  if (typeof options === &#x27;function&#x27;) {
+    cb = options;
+    options = null;
+  }
+
+  // Return Deferred or pass to adapter
+  if (typeof cb !== &#x27;function&#x27;) {
+    return new Deferred(this, this.findAll, criteria);
+  }
+
+  cb(new Error(&#x27;In Waterline &#x3e;= 0.9, findAll() has been deprecated in favor of find().&#x27; +
+              &#x27;\nPlease visit the migration guide at http://sailsjs.org for help upgrading.&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.findLike" id="apidoc.element.waterline.Collection.super_.prototype.findLike">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>findLike
+        <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findLike = function (criteria, options, cb) {
+  var usage = utils.capitalize(this.identity) + &#x27;.findLike([criteria],[options],callback)&#x27;;
+
+  // Normalize criteria
+  criteria = normalize.likeCriteria(criteria, this._schema.schema);
+  if (!criteria) return usageError(&#x27;Criteria must be an object!&#x27;, usage, cb);
+
+  this.find(criteria, options, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.findOne" id="apidoc.element.waterline.Collection.super_.prototype.findOne">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>findOne
+        <span class="apidocSignatureSpan">(criteria, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findOne = function (criteria, cb) {
+  var self = this;
+
+  if (typeof criteria === &#x27;function&#x27;) {
+    cb = criteria;
+    criteria = null;
+  }
+
+  // If the criteria is an array of objects, wrap it in an &#x22;or&#x22;
+  if (Array.isArray(criteria) &#x26;&#x26; _.all(criteria, function(crit) {return _.isObject(crit);})) {
+    criteria = {or: criteria};
+  }
+
+  // Check if criteria is an integer or string and normalize criteria
+  // to object, using the specified primary key field.
+  criteria = normalize.expandPK(self, criteria);
+
+  // Normalize criteria
+  criteria = normalize.criteria(criteria);
+
+  // Return Deferred or pass to adapter
+  if (typeof cb !== &#x27;function&#x27;) {
+    return new Deferred(this, this.findOne, criteria);
+  }
+
+  // Transform Search Criteria
+  criteria = self._transformer.serialize(criteria);
+
+  // serialize populated object
+  if (criteria.joins) {
+    criteria.joins.forEach(function(join) {
+      if (join.criteria &#x26;&#x26; join.criteria.where) {
+        var joinCollection = self.waterline.collections[join.child];
+        join.criteria.where = joinCollection._transformer.serialize(join.criteria.where);
+      }
+    });
+  }
+
+  // If there was something defined in the criteria that would return no results, don&#x27;t even
+  // run the query and just return an empty result set.
+  if (criteria === false || criteria.where === null) {
+    // Build Default Error Message
+    var err = &#x27;.findOne() requires a criteria. If you want the first record try .find().limit(1)&#x27;;
+    return cb(new Error(err));
+  }
+
+  // Build up an operations set
+  var operations = new Operations(self, criteria, &#x27;findOne&#x27;);
+
+  // Run the operations
+  operations.run(function(err, values) {
+    if (err) return cb(err);
+    if (!values.cache) return cb();
+
+    // If no joins are used grab the only item from the cache and pass to the returnResults
+    // function.
+    if (!criteria.joins) {
+      values = values.cache[self.identity];
+      return returnResults(values);
+    }
+
+    // If the values are already combined, return the results
+    if (values.combined) {
+      return returnResults(values.cache[self.identity]);
+    }
+
+    // Find the primaryKey of the current model so it can be passed down to the integrator.
+    // Use &#x27;id&#x27; as a good general default;
+    var primaryKey = &#x27;id&#x27;;
+
+    Object.keys(self._schema.schema).forEach(function(key) {
+      if (self._schema.schema[key].hasOwnProperty(&#x27;primaryKey&#x27;) &#x26;&#x26; self._schema.schema[key].primaryKey) {
+        primaryKey = key;
+      }
+    });
+
+
+    // Perform in-memory joins
+    Integrator(values.cache, criteria.joins, primaryKey, function(err, results) {
+      if (err) return cb(err);
+      if (!results) return cb();
+
+      // We need to run one last check on the results using the criteria. This allows a self
+      // association where we end up with two records in the cache both having each other as
+      // embedded objects and we only want one result. However we need to filter any join criteria
+      // out of the top level where query so that searchs by primary key still work.
+      var tmpCriteria = _.cloneDeep(criteria.where);
+      if (!tmpCriteria) tmpCriteria = {};
+
+      criteria.joins.forEach(function(join) {
+        if (!hasOwnProperty(join, &#x27;alias&#x27;)) return;
+
+        // Check for `OR` criteria
+        if (hasOwnProperty(tmpCriteria, &#x27;or&#x27;)) {
+          tmpCriteria.or.forEach(function(search) {
+            if (!hasOwnProperty(search, join.alias)) return;
+            delete search[join.alias];
+          });
+        }
+
+        if (!hasOwnProperty(tmpCriteria, join.alias)) return;
+        delete tmpCriteria[join.alias];
+      });
+
+      // Pass results into Waterline-Criteria
+      var _criteria = { where: tmpCriteria };
+      results = waterlineCriteria(&#x27;parent&#x27;, { parent: results }, _criteria).results;
+
+      results.forEach(function(res) {
+
+        // Go Ahead and perform any sorts on the associated data
+        criteria.joins.forEach(function(join) {
+          if (!join.criteria) return;
+          var c = normalize.criteria(join.criteria);
+          if (!c.sort) return;
+
+          var alias = join.alias;
+          res[alias] = so ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Query Methods
+
+Queries can be run with either a callback interface or with a deferred object. For building complicated queries, the deferred object
+ method is the best choice. For convenience, promises are supported by default.
+
+**Callback Method**
+
+```javascript
+User.<span class="apidocCodeKeywordSpan">findOne</span>({ id: 1 }, function(err, user) {
+  // Do stuff here
+});
+```
+
+**Deferred Object Method**
+
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.findOneLike" id="apidoc.element.waterline.Collection.super_.prototype.findOneLike">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>findOneLike
+        <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findOneLike = function (criteria, options, cb) {
+  var usage = utils.capitalize(this.identity) + &#x27;.findOneLike([criteria],[options],callback)&#x27;;
+
+  // Normalize criteria
+  criteria = normalize.likeCriteria(criteria, this._schema.schema);
+  if (!criteria) return usageError(&#x27;Criteria must be an object!&#x27;, usage, cb);
+
+  this.findOne(criteria, options, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.findOrCreate" id="apidoc.element.waterline.Collection.super_.prototype.findOrCreate">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>findOrCreate
+        <span class="apidocSignatureSpan">(criteria, values, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findOrCreate = function (criteria, values, cb) {
+  var self = this;
+
+  if (typeof values === &#x27;function&#x27;) {
+    cb = values;
+    values = null;
+  }
+
+  // If no criteria is specified, bail out with a vengeance.
+  var usage = utils.capitalize(this.identity) + &#x27;.findOrCreate([criteria], values, callback)&#x27;;
+  if (typeof cb == &#x27;function&#x27; &#x26;&#x26; (!criteria || criteria.length === 0)) {
+    return usageError(&#x27;No criteria option specified!&#x27;, usage, cb);
+  }
+
+  // Normalize criteria
+  criteria = normalize.criteria(criteria);
+  // If no values were specified, use criteria
+  if (!values) values = criteria.where ? criteria.where : criteria;
+
+  // Return Deferred or pass to adapter
+  if (typeof cb !== &#x27;function&#x27;) {
+    return new Deferred(this, this.findOrCreate, criteria, values);
+  }
+
+  // This is actually an implicit call to findOrCreateEach
+  if (Array.isArray(criteria) &#x26;&#x26; Array.isArray(values)) {
+    return this.findOrCreateEach(criteria, values, cb);
+  }
+
+  if (typeof cb !== &#x27;function&#x27;) return usageError(&#x27;Invalid callback specified!&#x27;, usage, cb);
+
+  // Try a find first.
+  this.find(criteria).exec(function(err, results) {
+    if (err) return cb(err);
+
+    if (results &#x26;&#x26; results.length !== 0) {
+
+      // Unserialize values
+      results = self._transformer.unserialize(results[0]);
+
+      // Return an instance of Model
+      var model = new self._model(results);
+      return cb(null, model);
+    }
+
+    // Create a new record if nothing is found.
+    self.create(values).exec(function(err, result) {
+      if (err) return cb(err);
+      return cb(null, result);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.findOrCreateEach" id="apidoc.element.waterline.Collection.super_.prototype.findOrCreateEach">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>findOrCreateEach
+        <span class="apidocSignatureSpan">(criteria, valuesList, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findOrCreateEach = function (criteria, valuesList, cb) {
+  var self = this;
+
+  if (typeof valuesList === &#x27;function&#x27;) {
+    cb = valuesList;
+    valuesList = null;
+  }
+
+  // Normalize criteria
+  criteria = normalize.criteria(criteria);
+
+  // Return Deferred or pass to adapter
+  if (typeof cb !== &#x27;function&#x27;) {
+    return new Deferred(this, this.findOrCreateEach, criteria, valuesList);
+  }
+
+  // Validate Params
+  var usage = utils.capitalize(this.identity) + &#x27;.findOrCreateEach(criteria, valuesList, callback)&#x27;;
+
+  if (typeof cb !== &#x27;function&#x27;) return usageError(&#x27;Invalid callback specified!&#x27;, usage, cb);
+  if (!criteria) return usageError(&#x27;No criteria specified!&#x27;, usage, cb);
+  if (!Array.isArray(criteria)) return usageError(&#x27;No criteria specified!&#x27;, usage, cb);
+  if (!valuesList) return usageError(&#x27;No valuesList specified!&#x27;, usage, cb);
+  if (!Array.isArray(valuesList)) return usageError(&#x27;Invalid valuesList specified (should be an array!)&#x27;, usage, cb);
+
+  var errStr = _validateValues(valuesList);
+  if (errStr) return usageError(errStr, usage, cb);
+
+  // Validate each record in the array and if all are valid
+  // pass the array to the adapter&#x27;s findOrCreateEach method
+  var validateItem = function(item, next) {
+    _validate.call(self, item, next);
+  };
+
+
+  async.each(valuesList, validateItem, function(err) {
+    if (err) return cb(err);
+
+    // Transform Values
+    var transformedValues = [];
+
+    valuesList.forEach(function(value) {
+
+      // Transform values
+      value = self._transformer.serialize(value);
+
+      // Clean attributes
+      value = self._schema.cleanValues(value);
+      transformedValues.push(value);
+    });
+
+    // Set values array to the transformed array
+    valuesList = transformedValues;
+
+    // Transform Search Criteria
+    var transformedCriteria = [];
+
+    criteria.forEach(function(value) {
+      value = self._transformer.serialize(value);
+      transformedCriteria.push(value);
+    });
+
+    // Set criteria array to the transformed array
+    criteria = transformedCriteria;
+
+    // Pass criteria and attributes to adapter definition
+    self.adapter.findOrCreateEach(criteria, valuesList, function(err, values) {
+      if (err) return cb(err);
+
+      // Unserialize Values
+      var unserializedValues = [];
+
+      values.forEach(function(value) {
+        value = self._transformer.unserialize(value);
+        unserializedValues.push(value);
+      });
+
+      // Set values array to the transformed array
+      values = unserializedValues;
+
+      // Run AfterCreate Callbacks
+      async.each(values, function(item, next) {
+        callbacks.afterCreate(self, item, next);
+      }, function(err) {
+        if (err) return cb(err);
+
+        var models = [];
+
+        // Make each result an instance of model
+        values.forEach(function(value) {
+          models.push(new self._model(value));
+        });
+
+        cb(null, models);
+      });
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.generateAssociationFinders" id="apidoc.element.waterline.Collection.super_.prototype.generateAssociationFinders">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>generateAssociationFinders
+        <span class="apidocSignatureSpan">(attrName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateAssociationFinders = function (attrName) {
+  var self = this;
+  var name, model;
+
+  // Find the user defined key for this attrName, look in self defined columnName
+  // properties and if that&#x27;s not set see if the generated columnName matches the attrName
+  for (var key in this._attributes) {
+
+    // Cache the value
+    var cache = this._attributes[key];
+
+    if (!hasOwnProperty(cache, &#x27;model&#x27;)) continue;
+
+    if (cache.model.toLowerCase() + &#x27;_id&#x27; === attrName) {
+      name = key;
+      model = cache.model;
+    }
+  }
+
+  if (!name || !model) return;
+
+  // Build a findOneBy&#x3c;attrName&#x3e; dynamic finder that forces a join on the association
+  this[&#x27;findOneBy&#x27; + utils.capitalize(name)] = function dynamicAssociationMethod(value, cb) {
+
+    // Check proper usage
+    var usage = utils.capitalize(self.identity) + &#x27;.&#x27; + &#x27;findBy&#x27; + utils.capitalize(name) +
+      &#x27;(someValue, callback)&#x27;;
+
+    if (typeof value === &#x27;undefined&#x27;) return usageError(&#x27;No value specified!&#x27;, usage, cb);
+    if (typeof value === &#x27;function&#x27;) return usageError(&#x27;No value specified!&#x27;, usage, cb);
+
+    var criteria = associationQueryCriteria(self, value, attrName);
+    return this.findOne(criteria, cb);
+  };
+
+  // Build a findBy&#x3c;attrName&#x3e; dynamic finder that forces a join on the association
+  this[&#x27;findBy&#x27; + utils.capitalize(name)] = function dynamicAssociationMethod(value, cb) {
+
+    // Check proper usage
+    var usage = utils.capitalize(self.identity) + &#x27;.&#x27; + &#x27;findBy&#x27; + utils.capitalize(name) +
+      &#x27;(someValue, callback)&#x27;;
+
+    if (typeof value === &#x27;undefined&#x27;) return usageError(&#x27;No value specified!&#x27;, usage, cb);
+    if (typeof value === &#x27;function&#x27;) return usageError(&#x27;No value specified!&#x27;, usage, cb);
+
+    var criteria = associationQueryCriteria(self, value, attrName);
+    return this.find(criteria, cb);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.generateDynamicFinder" id="apidoc.element.waterline.Collection.super_.prototype.generateDynamicFinder">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>generateDynamicFinder
+        <span class="apidocSignatureSpan">(attrName, method, dontCapitalize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateDynamicFinder = function (attrName, method, dontCapitalize) {
+  var self = this;
+  var criteria;
+
+  // Capitalize Attribute Name for camelCase
+  var preparedAttrName = dontCapitalize ? attrName : utils.capitalize(attrName);
+
+  // Figure out actual dynamic method name by injecting attribute name
+  var actualMethodName = method.replace(/\*/g, preparedAttrName);
+
+  // Assign this finder to the collection
+  this[actualMethodName] = function dynamicMethod(value, options, cb) {
+
+    if (typeof options === &#x27;function&#x27;) {
+      cb = options;
+      options = null;
+    }
+
+    options = options || {};
+
+    var usage = utils.capitalize(self.identity) + &#x27;.&#x27; + actualMethodName + &#x27;(someValue,[options],callback)&#x27;;
+
+    if (typeof value === &#x27;undefined&#x27;) return usageError(&#x27;No value specified!&#x27;, usage, cb);
+    if (options.where) return usageError(&#x27;Cannot specify `where` option in a dynamic &#x27; + method + &#x27;*() query!&#x27;, usage, cb);
+
+    // Build criteria query and submit it
+    options.where = {};
+    options.where[attrName] = value;
+
+    switch (method) {
+
+
+      ///////////////////////////////////////
+      // Finders
+      ///////////////////////////////////////
+
+
+      case &#x27;findOneBy*&#x27;:
+      case &#x27;findOneBy*In&#x27;:
+        return self.findOne(options, cb);
+
+      case &#x27;findOneBy*Like&#x27;:
+        criteria = _.extend(options, {
+          where: {
+            like: options.where
+          }
+        });
+
+        return self.findOne(criteria, cb);
+
+
+      ///////////////////////////////////////
+      // Aggregate Finders
+      ///////////////////////////////////////
+
+
+      case &#x27;findBy*&#x27;:
+      case &#x27;findBy*In&#x27;:
+        return self.find(options, cb);
+
+      case &#x27;findBy*Like&#x27;:
+        criteria = _.extend(options, {
+          where: {
+            like: options.where
+          }
+        });
+
+        return self.find(criteria, cb);
+
+
+      ///////////////////////////////////////
+      // Count Finders
+      ///////////////////////////////////////
+
+
+      case &#x27;countBy*&#x27;:
+      case &#x27;countBy*In&#x27;:
+        return self.count(options, cb);
+
+      case &#x27;countBy*Like&#x27;:
+        criteria = _.extend(options, {
+          where: {
+            like: options.where
+          }
+        });
+
+        return self.count(criteria, cb);
+
+
+      ///////////////////////////////////////
+      // Searchers
+      ///////////////////////////////////////
+
+      case &#x27;*StartsWith&#x27;:
+        return self.startsWith(options, cb);
+
+      case &#x27;*Contains&#x27;:
+        return self.contains(options, cb);
+
+      case &#x27;*EndsWith&#x27;:
+        return self.endsWith(options, cb);
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.join" id="apidoc.element.waterline.Collection.super_.prototype.join">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>join
+        <span class="apidocSignatureSpan">(collection, fk, pk, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">join = function (collection, fk, pk, cb) {
+  this._adapter.join(collection, fk, pk, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.select" id="apidoc.element.waterline.Collection.super_.prototype.select">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>select
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">select = function () {
+  this.find.apply(this, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.startsWith" id="apidoc.element.waterline.Collection.super_.prototype.startsWith">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>startsWith
+        <span class="apidocSignatureSpan">(criteria, options, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startsWith = function (criteria, options, cb) {
+  var usage = utils.capitalize(this.identity) + &#x27;.startsWith([criteria],[options],callback)&#x27;;
+
+  criteria = normalize.likeCriteria(criteria, this._schema.schema, function applyStartsWith(criteria) {
+    return criteria + &#x27;%&#x27;;
+  });
+
+  if (!criteria) return usageError(&#x27;Criteria must be an object!&#x27;, usage, cb);
+
+  this.find(criteria, options, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.stream" id="apidoc.element.waterline.Collection.super_.prototype.stream">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>stream
+        <span class="apidocSignatureSpan">(criteria, transformation)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stream = function (criteria, transformation) {
+  var self = this;
+
+  var usage = utils.capitalize(this.identity) + &#x27;.stream([criteria],[options])&#x27;;
+
+  // Normalize criteria and fold in options
+  criteria = normalize.criteria(criteria);
+
+  // Transform Search Criteria
+  criteria = self._transformer.serialize(criteria);
+
+  // Configure stream to adapter, kick off fetch, and return stream object
+  // so that user code can use it as it fires data events
+  var stream = new ModelStream(transformation);
+
+  // very important to wait until next tick before triggering adapter
+  // otherwise write() and end() won&#x27;t fire properly
+  process.nextTick(function() {
+
+    // Write once immediately to force prefix in case no models are returned
+    stream.write();
+
+    // Trigger Adapter Method
+    self.adapter.stream(criteria, stream);
+  });
+
+  return stream;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.sync" id="apidoc.element.waterline.Collection.super_.prototype.sync">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>sync
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sync = function (cb) {
+  var self = this;
+
+  // If any adapters used in this collection have syncable turned off set migrate to safe.
+  //
+  // I don&#x27;t think a collection would ever need two adapters where one needs migrations and
+  // the other doesn&#x27;t but it may be a possibility. The way the auto-migrations work now doesn&#x27;t
+  // allow for this either way so this should be good. We will probably need to revist this soonish
+  // however and take a pass at getting something working for better migration systems.
+  // - particlebanana
+
+  _.keys(this.connections).forEach(function(connectionName) {
+    var adapter = self.connections[connectionName]._adapter;
+
+    // If not syncable, don&#x27;t sync
+    if (hop(adapter, &#x27;syncable&#x27;) &#x26;&#x26; !adapter.syncable) {
+      self.migrate = &#x27;safe&#x27;;
+    }
+  });
+
+  // Assign synchronization behavior depending on migrate option in collection
+  if (this.migrate &#x26;&#x26; [&#x27;drop&#x27;, &#x27;alter&#x27;, &#x27;create&#x27;, &#x27;safe&#x27;].indexOf(this.migrate) &#x3e; -1) {
+
+    // Determine which sync strategy to use
+    var strategyMethodName = &#x27;migrate&#x27; + utils.capitalize(this.migrate);
+
+    // Run automigration strategy
+    this.adapter[strategyMethodName](function(err) {
+      if (err) return cb(err);
+      cb();
+    });
+  }
+
+  // Throw Error
+  else cb(new Error(&#x27;Invalid `migrate` strategy defined for collection. Must be one of the following: drop, alter, create, safe&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.update" id="apidoc.element.waterline.Collection.super_.prototype.update">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>update
+        <span class="apidocSignatureSpan">(criteria, values, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (criteria, values, cb) {
+
+  var self = this;
+
+  if (typeof criteria === &#x27;function&#x27;) {
+    cb = criteria;
+    criteria = null;
+  }
+
+  // Return Deferred or pass to adapter
+  if (typeof cb !== &#x27;function&#x27;) {
+    return new Deferred(this, this.update, criteria, values);
+  }
+
+  // If there was something defined in the criteria that would return no results, don&#x27;t even
+  // run the query and just return an empty result set.
+  if (criteria === false) {
+    return cb(null, []);
+  }
+
+  // Ensure proper function signature
+  var usage = utils.capitalize(this.identity) + &#x27;.update(criteria, values, callback)&#x27;;
+  if (!values) return usageError(&#x27;No updated values specified!&#x27;, usage, cb);
+
+  // Format Criteria and Values
+  var valuesObject = prepareArguments.call(this, criteria, values);
+
+  // Create any of the belongsTo associations and set the foreign key values
+  createBelongsTo.call(this, valuesObject, function(err) {
+    if (err) return cb(err);
+
+    beforeCallbacks.call(self, valuesObject.values, function(err) {
+      if (err) return cb(err);
+      updateRecords.call(self, valuesObject, cb);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.validate" id="apidoc.element.waterline.Collection.super_.prototype.validate">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>validate
+        <span class="apidocSignatureSpan">(values, presentOnly, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">validate = function (values, presentOnly, cb) {
+  var self = this;
+
+  // Handle optional second arg
+  if (typeof presentOnly === &#x27;function&#x27;) {
+    cb = presentOnly;
+    presentOnly = false;
+  }
+
+  async.series([
+
+    // Run Before Validate Lifecycle Callbacks
+    function(cb) {
+      var runner = function(item, callback) {
+        item.call(self, values, function(err) {
+          if (err) return callback(err);
+          callback();
+        });
+      };
+
+      async.eachSeries(self._callbacks.beforeValidate, runner, function(err) {
+        if (err) return cb(err);
+        cb();
+      });
+    },
+
+    // Run Validation
+    function(cb) {
+      self._validator.validate(values, presentOnly, function _afterValidating(err, invalidAttributes) {
+        // If fatal error occurred, handle it accordingly.
+        if (err) {
+          return cb(err);
+        }
+
+        // Otherwise, check out the invalid attributes that were sent back.
+        //
+        // Create validation error here
+        // (pass in the invalid attributes as well as the collection&#x27;s globalId)
+        if (invalidAttributes) {
+          return cb(new WLValidationError({
+            invalidAttributes: invalidAttributes,
+            model: self.globalId || self.adapter.identity
+          }));
+        }
+
+        cb();
+      });
+    },
+
+    // Run After Validate Lifecycle Callbacks
+    function(cb) {
+      var runner = function(item, callback) {
+        item(values, function(err) {
+          if (err) return callback(err);
+          callback();
+        });
+      };
+
+      async.eachSeries(self._callbacks.afterValidate, runner, function(err) {
+        if (err) return cb(err);
+        cb();
+      });
+    }
+
+  ], function(err) {
+    if (err) return cb(err);
+    cb();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.waterline.Collection.super_.prototype.where" id="apidoc.element.waterline.Collection.super_.prototype.where">
+        function <span class="apidocSignatureSpan">waterline.Collection.super_.prototype.</span>where
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">where = function () {
+  this.find.apply(this, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var postgres = require(&#x27;sails-postgresql&#x27;);
+
+new User({ tableName: &#x27;foobar&#x27;, adapters: { postgresql: postgres }}, function(err, Model) {
+
+  // We now have an instantiated collection to execute queries against
+  Model.find()
+  .<span class="apidocCodeKeywordSpan">where</span>({ age: 21 })
+  .limit(10)
+  .exec(function(err, users) {
+    // Now we have an array of users
+  });
+
+});
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
